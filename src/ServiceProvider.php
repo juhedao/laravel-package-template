@@ -49,7 +49,7 @@ class ServiceProvider extends LaravelServiceProvider {
     }
 
     private function handleHelpers() {
-        $helpPath = __DIR__ .'/helpers/*.php';
+        $helpPath = __DIR__ .'/libraries/*.php';
         foreach(glob($helpPath) as $fileName){
             require_once($fileName);
         }
