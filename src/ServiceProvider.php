@@ -24,7 +24,7 @@ class ServiceProvider extends LaravelServiceProvider {
         // $this->handleViews();
         // $this->handleTranslations();
         // $this->handleRoutes();
-        // $this->handleHelpers();
+        // $this->handleLibraries();
     }
 
     /**
@@ -48,7 +48,7 @@ class ServiceProvider extends LaravelServiceProvider {
         return [];
     }
 
-    private function handleHelpers() {
+    private function handleLibraries() {
         $helpPath = __DIR__ .'/libraries/*.php';
         foreach(glob($helpPath) as $fileName){
             require_once($fileName);
